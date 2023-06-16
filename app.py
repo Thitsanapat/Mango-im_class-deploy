@@ -1,4 +1,5 @@
 import streamlit as st
+pip freeze | grep opencv-python
 import subprocess
 
 # Installation of the required packages
