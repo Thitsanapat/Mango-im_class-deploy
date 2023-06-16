@@ -1,4 +1,15 @@
-!pip install opencv-python
+import streamlit as st
+import subprocess
+
+# Installation of the required packages
+st.set_option('deprecation.showfileUploaderEncoding', False)
+if st.button('Install required packages'):
+    st.write('Installing packages...')
+    cmd = ['pip', 'install', 'opencv-python']
+    subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    st.write('Packages installed!')
+    exit()
+
 import cv2
 import numpy as np
 import streamlit as st
